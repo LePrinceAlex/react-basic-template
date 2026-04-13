@@ -4,12 +4,15 @@ import { X } from "lucide-react";
 import { useState } from "react";
 
 
-export default function Navbar() {
+export default function Navbar({scrolled}) {
     
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     return (
-        <nav className="fixed top-0 w-full z-50 transition-all duration-300 bg-indigo-900/20 backdrop-blur-sm">
+        <nav className={`fixed top-0 w-full z-50 transition-all duration-300 
+        ${scrolled 
+         ? "bg-purple-900/20 backdrop-blur-lg border-b border-purple-800 shadow-lg" 
+         : "bg-purple-900/20 backdrop-blur-sm"}`}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-14 sm:h-16 md:h-20">
                     <div className="flex items-center space-x-1 group cursor-pointer">
@@ -17,7 +20,7 @@ export default function Navbar() {
                             <img src="/book.webp" alt="myownlibrary" className="w-6 sm:w-8"/>
                         </div>
                             <span className="text-lg sm:text-xl md:text-2xl font-medium">
-                                <span className="text-purple-700">myOwn</span>
+                                <span className="text-violet-400">myOwn</span>
                                 <span className="text-white">LIBRARY</span>
                             </span>
                     </div>

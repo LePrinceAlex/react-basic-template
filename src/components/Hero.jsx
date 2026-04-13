@@ -109,7 +109,10 @@ export default function Hero() {
                                                 fontSize: "11px", 
                                                 lineHeight:"1.4", 
                                                 height: "100%", 
-                                                border: "1px solid #1e1e1e"
+                                                border: "1px solid #1e1e1e",
+                                                wordWrap: "break-word",
+                                                whiteSpace: "pre-wrap",
+                                                textAlign: "left"
                                             }}>
                                             {contentExamples[activeTab]}
                                         </SyntaxHighlighter>
